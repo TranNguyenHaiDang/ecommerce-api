@@ -8,6 +8,7 @@ const CustomZodValidationPipe = createZodValidationPipe({
     console.log(error)
     return new UnprocessableEntityException({
       errors: error.issues.map((issue) => ({
+        code: issue.code,
         path: issue.path.join('.'),
         message: issue.message,
       })),
