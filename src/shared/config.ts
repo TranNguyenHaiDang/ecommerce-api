@@ -23,12 +23,13 @@ const configSchema = z.object({
   ADMIN_PASSWORD: z.string(),
   ADMIN_EMAIL: z.string(),
   ADMIN_PHONE_NUMBER: z.string(),
+  OTP_EXPIRES_IN: z.string(),
 })
 
 const configServer = configSchema.safeParse(process.env)
 
 if (!configServer.success) {
-  console.log('Các giá trị khai báo trong file .env không hợp lệ')
+  console.log('Các giá trị khai báo trong file .env không  hợp lệ')
   console.error(configServer.error)
   process.exit(1)
 }
