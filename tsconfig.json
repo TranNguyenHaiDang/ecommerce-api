@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "jsx": "react-jsx",
     "module": "commonjs",
     "target": "ES2021",
 
@@ -34,6 +35,6 @@
     "require": ["tsconfig-paths/register"]
   },
 
-  "include": ["src/**/*.ts", "initialScript/**/*.ts"],
+  "include": ["src/**/*.ts", "initialScript/**/*.ts", "emails/**/*.ts", "emails/**/*.tsx", "src/shared/services/email.service.tsx"],
   "exclude": ["node_modules", "dist"]
 }

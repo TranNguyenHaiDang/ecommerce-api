@@ -93,6 +93,7 @@ export class AuthService {
       code,
     })
     if (error) {
+      console.log(error)
       throw new UnprocessableEntityException({
         message: 'Gửi mã OTP thất bại',
         path: 'code',
